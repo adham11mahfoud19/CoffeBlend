@@ -6,7 +6,9 @@ import "../globals.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
-
+export async function generateStaticParams() {
+  return [];
+}
 interface Params {
   locale: string;
 }

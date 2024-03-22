@@ -14,7 +14,9 @@ export const metadata = {
   description:"Here The MENU Page, You Can See The Dishes and Drinks, AND Select What Ever Do You Want"
 }
 
-
+export async function generateStaticParams() {
+  return [];
+}
 const Page = () => {
     let food = dishes
     let t = useTranslations('Index')

@@ -10,6 +10,9 @@ export const metadata = {
   title: "Cart Page",
   description:"Here The Cart Page, You Can See The Dishes and Drinks You Have bought"
 }
+export async function  generateStaticParams() {
+  return [];
+}
 
 
 const Page = () => {
