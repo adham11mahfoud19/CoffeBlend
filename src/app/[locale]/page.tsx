@@ -14,9 +14,7 @@ export const metadata = {
           Welcome to Blend Coffee, Here You Can Drink Coffe Eat Meals, pick up some products and go home
               `
 }
-export async function generateStaticParams() {
-  return [];
-}
+
 
 
 

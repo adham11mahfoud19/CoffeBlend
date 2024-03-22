@@ -6,13 +6,13 @@ import DrinksCart from './components/CartKinds/DrinksCart/DrinksCart'
 import Order from './components/CartKinds/Order/Order'
 import RootLayout from '../../layout'
 
+
+
 export const metadata = {
   title: "Cart Page",
   description:"Here The Cart Page, You Can See The Dishes and Drinks You Have bought"
 }
-export async function  generateStaticParams() {
-  return [];
-}
+
 
 
 const Page = () => {
