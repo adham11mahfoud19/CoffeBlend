@@ -1,0 +1,16 @@
+{
+    "Index": {
+      "cartPage":"Cart Page",
+      "cartDesc": "Here The Cart Page, You Can See The Dishes and Drinks You Have bought",
+      "lang":"en",
+      "title": "Hello world!",
+      "sayIamGood":"I am Very Good!",
+      "home":"HOME",
+      "menu": "MENU",
+      "services": "SERVICES",
+      "blog":"BLOG",
+      "about":"ABOUT",
+      "contact":"CONTACT"
+
+    }
+  }

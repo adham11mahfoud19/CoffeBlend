@@ -1,0 +1,56 @@
+.photosConatiner {
+    background-image: url("./images/dish1.jpg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    background-position: center;
+    animation-name: changeThePhoto;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    
+    display: flex;
+    
+}
+.desciption {
+    
+    margin:auto auto 50% auto;
+    padding: 10px;
+    border-radius: 20px;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+ 
+}
+@media (max-width:1000px) {
+    .desciption {
+        margin:calc(50%) auto auto auto;
+    }
+}
+.desciption p {
+    font-size: 45px;
+    font-weight: bold;
+    font-family:cursive;
+    -webkit-text-stroke: 2px #c49b63;
+}
+.desciption h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+@keyframes changeThePhoto {
+    20% {
+        background-image: url("./images/dish2.jpg.webp")
+    }
+    40% {
+        background-image: url("./images/menu1.jpg.webp")
+    }
+    
+    60% {
+        background-image: url("./images/dish3.jpg.webp")
+    }
+    80% {
+        background-image: url("./images/menu2.jpg.webp")
+    }
+}

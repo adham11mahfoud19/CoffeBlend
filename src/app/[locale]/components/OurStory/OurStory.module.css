@@ -1,0 +1,15 @@
+.ourstoryConatiner {
+    background-image: url("./images/about.jpg.webp");
+    background-size:50% 100%;
+
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 600px;
+    position: relative;
+    
+}
+@media (max-width: 880px) {
+    .ourstoryConatiner {
+        background-size: cover;
+    }
+}
