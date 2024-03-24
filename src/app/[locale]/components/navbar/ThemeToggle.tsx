@@ -12,7 +12,7 @@ const ThemeToggle = (props: any) => {
         // Get the language name from the URL using window.location
         let lang = window.location.pathname;
         setLanguage(lang.slice(1));
-        console.log(language)
+        // console.log(language)
     }, []);
 
     useEffect(() => {

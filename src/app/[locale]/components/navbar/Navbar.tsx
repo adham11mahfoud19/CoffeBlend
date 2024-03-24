@@ -37,7 +37,7 @@ const Navbar = () => {
       let lang = window.location.pathname;
       setLanguage(lang.slice(1,3));
       setChangeLanguage(lang.slice(3))
-      console.log(lang)
+      // console.log(lang)
       
     }, [window.location.pathname]);
     window.addEventListener("scroll", changeBackfound)

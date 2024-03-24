@@ -16,7 +16,7 @@ const AddDishesButton = (props:any) => {
     let list = useSelector((state:any) => state.food)
     let lang = props.lang
     useEffect(() => {
-            console.log(list)
+            // console.log(list)
     },[list])
   return (
     <button
