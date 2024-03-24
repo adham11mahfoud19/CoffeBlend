@@ -77,19 +77,19 @@ const DrinksCart: React.FC<DrinksCartProps> = ({ lang }) => {
                 <Image src={drink.image} alt='image' style={{ width: "150px", height: "100px" }} />
                 <button
                   onClick={() => deleteProduct(drink)}
-                  className='dark:text-white dark:border-2 bg-red-600 hover:text-red-600 dark:hover:text-red-600 dark:hover:border-red-600 hover:border-red-600 hover:bg-white font-bold duration-150 text-white border-2 border-white rounded-lg h-[30%] w-[30%]'
+                  className='dark:text-white dark:border-2 bg-red-600 hover:text-red-600 dark:hover:text-red-600 dark:hover:border-red-600 hover:border-red-600 hover:bg-white font-bold duration-150 text-white border-2 border-white rounded-lg w-[100%] md:h-[30%] md:w-[30%]'
                 >
                   {lang === "en" ? "Delete From Cart" : "إزالة من السلة"}
                 </button>
                 <button
                   onClick={() => dispatch(addToDrinks(drink))}
-                  className='dark:text-white dark:border-2 bg-sky-600 dark:hover:text-sky-600 dark:hover:border-sky-600 hover:border-sky-600 hover:text-sky-600 hover:bg-white font-bold duration-150 text-white border-2 border-white rounded-lg h-[30%] w-[30%]'
+                  className='dark:text-white dark:border-2 bg-sky-600 dark:hover:text-sky-600 dark:hover:border-sky-600 hover:border-sky-600 hover:text-sky-600 hover:bg-white font-bold duration-150 text-white border-2 border-white rounded-lg w-[100%] md:h-[30%] md:w-[30%]'
                 >
                   {lang === "en" ? "Add More To Cart" : "إضافة المزيد إلى السلة"}
                 </button>
               </div>
 
-              <div className='p-4 md:w-[40%] lg:w-[40%] text-center'>
+              <div className='p-4 md:w-[40%] lg:w-[40%] text-center m-auto'>
                 <h1 className='text-2xl text-brown font-bold'>{lang === "en" ? drink.nameEn : drink.name}</h1>
                 <p className='text-xl text-gray-500 font-medium mt-4'>{lang === "en" ? drink.descriptionEn : drink.description}</p>
                 <p className='text-brown font-bold'>{drink.price}$</p>

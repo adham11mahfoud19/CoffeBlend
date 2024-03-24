@@ -60,7 +60,9 @@ const Navbar = () => {
             onClick={() => {
               // handle the menu and make it not transparent at the top in small screens when clicked
               setScrollMenu(!scrollMenu)
-              setNavbar(!navbar)
+              if (!navbar) {
+                setNavbar(true)
+              }
             }}
       >
             
@@ -73,23 +75,23 @@ const Navbar = () => {
     `}>
      
       <li className={`mx-4 my-6 lg:my-0 ${scrollMenu ? "border-b-2 border-gray-500 p-4" : ""}`}>
-        <Link href={`${language == "en" ? "/en/" : "/ar/"}`} className="font-semibold hover:text-secondry duration-300">
+        <Link onClick={() => setScrollMenu(false)} href={`${language == "en" ? "/en/" : "/ar/"}`} className="font-semibold hover:text-secondry duration-300">
                 {language == "en" ? "HOME" : "الصفحة الرئيسية"}
         </Link>
       </li>
       <li className={`mx-4 my-6 md:my-0 ${scrollMenu ? "border-b-2 border-gray-500 p-4" : ""}`}>
-        <Link href={`${language == "en" ? "/en/menu" : "/ar/menu"}`} className="font-semibold hover:text-secondry duration-300">
+        <Link onClick={() => setScrollMenu(false)} href={`${language == "en" ? "/en/menu" : "/ar/menu"}`} className="font-semibold hover:text-secondry duration-300">
         {language == "en" ? "MENU" : "قائمة الطعام"}
         </Link>
       </li>
       
       <li className={`mx-4 hover:text-secondry my-6 md:my-0 ${scrollMenu ? "border-b-2 border-gray-500 p-4" : ""}`}>
-        <Link href={`${language == "en" ? "/en/cart" : "/ar/cart"}`} className="font-semibold flex  items-center hover:text-secondry duration-300">
+        <Link onClick={() => setScrollMenu(false)} href={`${language == "en" ? "/en/cart" : "/ar/cart"}`} className="font-semibold flex  items-center hover:text-secondry duration-300">
                 <FaShoppingBag className='text-white  text-xl'/> -{list1.length + list2.length}-
         </Link>
       </li>
       <li className={`mx-4 my-6 md:my-0 ${scrollMenu ? "border-b-2 border-gray-500 p-4" : ""}`}>
-        <Link href={language == "en" ? `/ar/${changeLang}` : `/en/${changeLang}`} className="font-semibold flex  items-center hover:text-secondry duration-300">
+        <Link onClick={() => setScrollMenu(false)} href={language == "en" ? `/ar/${changeLang}` : `/en/${changeLang}`} className="font-semibold flex  items-center hover:text-secondry duration-300">
                 {language == "en" ? <Image src={arabic} alt="arabic" width={50} /> : <Image src={english} alt="english" width={50} />}
         </Link>
       </li>
